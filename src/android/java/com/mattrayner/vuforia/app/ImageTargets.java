@@ -379,7 +379,7 @@ public class ImageTargets extends Activity implements ApplicationControl
         String package_name = getApplication().getPackageName();
         Resources resources = getApplication().getResources();
 
-        tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name);
+        tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name));
 
         tv1.getHandler().postDelayed(
             new Runnable(){
