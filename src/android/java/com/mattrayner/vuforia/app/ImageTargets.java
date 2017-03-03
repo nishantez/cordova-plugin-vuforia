@@ -412,7 +412,7 @@ public class ImageTargets extends Activity implements ApplicationControl
         // tv1.setVisibility(View.VISIBLE);
         tv1.postDelayed(
             new Runnable() {
-                public void run1() {
+                public void run() {
                     // Log.i("Function ran in 5 sec to hide text rvdfox");
                     tv1.setVisibility(View.GONE);
                     showView();
@@ -421,7 +421,7 @@ public class ImageTargets extends Activity implements ApplicationControl
 
         tv1.postDelayed(
             new Runnable(){
-                public void run2(){
+                public void run(){
                     tv1.setVisibility(View.VISIBLE);
                 }
             },12000);
