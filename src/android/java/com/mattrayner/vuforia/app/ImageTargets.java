@@ -378,12 +378,14 @@ public class ImageTargets extends Activity implements ApplicationControl
         mGlView.setRenderer(mRenderer);
 
 
-        new Timer().schedule(new TimerTask(){
-            // @override
-            public void run(){
-                showView();
-            }
-        },0,5000);
+        timedTasks();
+
+        // new Timer().schedule(new TimerTask(){
+        //     // @override
+        //     public void run(){
+        //         showView();
+        //     }
+        // },0,5000);
 
         // String package_name = getApplication().getPackageName();
         // Resources resources = getApplication().getResources();
@@ -414,6 +416,16 @@ public class ImageTargets extends Activity implements ApplicationControl
                     tv1.setVisibility(View.GONE);
                 }
             }, 2000);
+    }
+
+    private void timedTasks()
+    {
+        new Timer().schedule(new TimerTask(){
+            // @override
+            public void run(){
+                showView();
+            }
+        },0,5000);
     }
 
 
