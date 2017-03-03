@@ -378,7 +378,8 @@ public class ImageTargets extends Activity implements ApplicationControl
         mGlView.setRenderer(mRenderer);
 
 
-        timedTasks();
+        // timedTasks();
+        showView();
 
         // new Timer().schedule(new TimerTask(){
         //     // @override
@@ -408,25 +409,33 @@ public class ImageTargets extends Activity implements ApplicationControl
 
         tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name));
 
-        tv1.setVisibility(View.VISIBLE);
+        // tv1.setVisibility(View.VISIBLE);
         tv1.postDelayed(
             new Runnable() {
-                public void run() {
+                public void run1() {
                     // Log.i("Function ran in 5 sec to hide text rvdfox");
                     tv1.setVisibility(View.GONE);
+                    showView();
                 }
-            }, 2000);
+            },15000);
+
+        tv1.postDelayed(
+            new Runnable(){
+                public void run2(){
+                    tv1.setVisibility(View.VISIBLE);
+                }
+            },12000);
     }
 
-    private void timedTasks()
-    {
-        new Timer().schedule(new TimerTask(){
-            // @override
-            public void run(){
-                showView();
-            }
-        },0,5000);
-    }
+    // private void timedTasks()
+    // {
+    //     new Timer().schedule(new TimerTask(){
+    //         // @override
+    //         public void run(){
+    //             showView();
+    //         }
+    //     },0,5000);
+    // }
 
 
     private void startLoadingAnimation()
