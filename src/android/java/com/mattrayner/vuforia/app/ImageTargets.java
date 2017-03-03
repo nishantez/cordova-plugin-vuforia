@@ -384,7 +384,7 @@ public class ImageTargets extends Activity implements ApplicationControl
         tv1.getHandler().postDelayed(
             new Runnable(){
                 public void run(){
-                    Log.i('Function ran in 5 sec to hide text rvdfox');
+                    Log.i("Function ran in 5 sec to hide text rvdfox");
                     tv1.setVisibility(View.VISIBLE);
                 }
             }
