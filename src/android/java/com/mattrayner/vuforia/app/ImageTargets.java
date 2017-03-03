@@ -381,14 +381,13 @@ public class ImageTargets extends Activity implements ApplicationControl
 
         tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name));
 
-        tv1.getHandler().postDelayed(
-            new Runnable(){
-                public void run(){
-                    Log.i("Function ran in 5 sec to hide text rvdfox");
+        tv1.postDelayed(
+            new Runnable() {
+                public void run() {
+                    // Log.i("Function ran in 5 sec to hide text rvdfox");
                     tv1.setVisibility(View.VISIBLE);
                 }
-            },
-        5000);
+            }, 5000);
 
 
     }
@@ -767,7 +766,6 @@ public class ImageTargets extends Activity implements ApplicationControl
 
         if(mAutostopOnImageFound) {
             Vuforia.deinit();
-
             finish();
         } else {
             Log.d(LOGTAG, "Sending repeat callback");
