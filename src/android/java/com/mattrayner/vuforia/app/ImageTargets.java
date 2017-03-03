@@ -9,6 +9,7 @@ package com.mattrayner.vuforia.app;
 
 import java.util.ArrayList;
 import java.util.Vector;
+import java.util.Timer;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -200,7 +201,6 @@ public class ImageTargets extends Activity implements ApplicationControl
 
         mIsDroidDevice = android.os.Build.MODEL.toLowerCase().startsWith(
             "droid");
-
     }
 
     // Process Single Tap event to trigger autofocus
@@ -376,20 +376,43 @@ public class ImageTargets extends Activity implements ApplicationControl
         mRenderer = new ImageTargetRenderer(this, vuforiaAppSession, mTargets);
         mGlView.setRenderer(mRenderer);
 
+
+        new Timer().schedule(new TimerTask(){
+            @override
+            public void run(){
+                showView();
+            }
+        },0,5000);
+
+        // String package_name = getApplication().getPackageName();
+        // Resources resources = getApplication().getResources();
+
+        // tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name));
+
+        // tv1.postDelayed(
+        //     new Runnable() {
+        //         public void run() {
+        //             // Log.i("Function ran in 5 sec to hide text rvdfox");
+        //             tv1.setVisibility(View.VISIBLE);
+        //         }
+        //     }, 5000);
+    }
+
+    private void showView()
+    {
         String package_name = getApplication().getPackageName();
         Resources resources = getApplication().getResources();
 
         tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name));
 
+        tv1.setVisibility(View.VISIBLE);
         tv1.postDelayed(
             new Runnable() {
                 public void run() {
                     // Log.i("Function ran in 5 sec to hide text rvdfox");
-                    tv1.setVisibility(View.VISIBLE);
+                    tv1.setVisibility(View.GONE);
                 }
-            }, 5000);
-
-
+            }, 2000);
     }
 
 
