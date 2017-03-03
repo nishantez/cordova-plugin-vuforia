@@ -377,29 +377,7 @@ public class ImageTargets extends Activity implements ApplicationControl
         mRenderer = new ImageTargetRenderer(this, vuforiaAppSession, mTargets);
         mGlView.setRenderer(mRenderer);
 
-
-        // timedTasks();
         showView();
-
-        // new Timer().schedule(new TimerTask(){
-        //     // @override
-        //     public void run(){
-        //         showView();
-        //     }
-        // },0,5000);
-
-        // String package_name = getApplication().getPackageName();
-        // Resources resources = getApplication().getResources();
-
-        // tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name));
-
-        // tv1.postDelayed(
-        //     new Runnable() {
-        //         public void run() {
-        //             // Log.i("Function ran in 5 sec to hide text rvdfox");
-        //             tv1.setVisibility(View.VISIBLE);
-        //         }
-        //     }, 5000);
     }
 
     private void showView()
@@ -417,7 +395,7 @@ public class ImageTargets extends Activity implements ApplicationControl
                     tv1.setVisibility(View.GONE);
                     showView();
                 }
-            },15000);
+            },17000);
 
         tv1.postDelayed(
             new Runnable(){
@@ -426,17 +404,6 @@ public class ImageTargets extends Activity implements ApplicationControl
                 }
             },12000);
     }
-
-    // private void timedTasks()
-    // {
-    //     new Timer().schedule(new TimerTask(){
-    //         // @override
-    //         public void run(){
-    //             showView();
-    //         }
-    //     },0,5000);
-    // }
-
 
     private void startLoadingAnimation()
     {
