@@ -15,7 +15,6 @@
             android:id="@+id/txtview1"
             android:text="Scanning is progress, continue scan"
             android:textSize="14sp"
-            android:textColor="@android:color/#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_centerHorizontal="true"
