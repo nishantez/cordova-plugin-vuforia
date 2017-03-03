@@ -65,6 +65,7 @@ public class ImageTargets extends Activity implements ApplicationControl
 {
     private static final String LOGTAG = "ImageTargets";
     private static final String FILE_PROTOCOL = "file://";
+    private TextView tv1;
 
     ApplicationSession vuforiaAppSession;
 
@@ -375,6 +376,19 @@ public class ImageTargets extends Activity implements ApplicationControl
         mRenderer = new ImageTargetRenderer(this, vuforiaAppSession, mTargets);
         mGlView.setRenderer(mRenderer);
 
+        String package_name = getApplication().getPackageName();
+        Resources resources = getApplication().getResources();
+
+        tv1 = (TextView) findViewById(resources.getIdentifier("txtview1", "id", package_name);
+
+        tv1.getHandler().postDelayed(
+            new Runnable(){
+                public void run(){
+                    Log.i('Function ran in 5 sec to hide text rvdfox');
+                    tv1.setVisibility(View.VISIBLE);
+                }
+            }
+        5000);
 
 
     }

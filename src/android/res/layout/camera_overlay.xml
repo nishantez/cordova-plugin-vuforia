@@ -12,14 +12,17 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true" />
     <TextView
-       android:id="@+id/txtview1"
-       android:layout_width="wrap_content"
-       android:background="@drawable/bg_task"
-       android:layout_height="wrap_content"
-       android:textSize="14sp"
-       android:singleLine="true"
-       android:text="Scanning is progress, continue scan"
-       android:textColor="#FFFFFF" />
+            android:id="@+id/txtview1"
+            android:text="Scanning is progress, continue scan"
+            android:textSize="14sp"
+            android:textColor="@android:color/#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:visibility = "gone"
+            />
 
     <LinearLayout
             android:id="@+id/layout_top"
