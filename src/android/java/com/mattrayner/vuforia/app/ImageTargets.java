@@ -379,7 +379,7 @@ public class ImageTargets extends Activity implements ApplicationControl
 
 
         new Timer().schedule(new TimerTask(){
-            @override
+            // @override
             public void run(){
                 showView();
             }
