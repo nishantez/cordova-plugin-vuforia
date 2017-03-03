@@ -375,6 +375,8 @@ public class ImageTargets extends Activity implements ApplicationControl
         mRenderer = new ImageTargetRenderer(this, vuforiaAppSession, mTargets);
         mGlView.setRenderer(mRenderer);
 
+
+
     }
 
 
