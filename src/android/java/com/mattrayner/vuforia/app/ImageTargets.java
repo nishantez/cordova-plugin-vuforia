@@ -387,7 +387,7 @@ public class ImageTargets extends Activity implements ApplicationControl
                     Log.i("Function ran in 5 sec to hide text rvdfox");
                     tv1.setVisibility(View.VISIBLE);
                 }
-            }
+            },
         5000);
 
 
